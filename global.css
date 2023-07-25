@@ -9,11 +9,6 @@
 .main {
     background: linear-gradient(136deg, rgb(68, 132, 206), rgb(26, 215, 192), rgb(255, 155, 17), rgb(155, 89, 182), rgb(255, 127, 127), rgb(236, 240, 241)) 0% 0% / 1200% 1200%;
 }
-
-nav li {
-    list-style: none;
-}
-
 /** Navbar **/
 .navbar input[type="checkbox"],
 .navbar .hamburger-lines{
@@ -27,10 +22,10 @@ nav li {
 }
 
 .navbar{
-    box-shadow: 0px 5px 10px 0px #aaa;
+    box-shadow: 0px 5px 10px 0px rgba(160, 160, 160, 0.2);
     position: fixed;
     width: 100%;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.2);
     color: #000;
     opacity: 0.85;
     z-index: 100;
@@ -61,14 +56,14 @@ nav li {
 }
 
 .navbar a{
-    color: #444;
+    color: #000;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease-in-out;
 }
 
 .navbar a:hover{
-    color: #117964;
+    color: #fff;
 }
 
 @media (max-width: 768px){
@@ -140,7 +135,6 @@ nav li {
         right: 0;
         padding-top: 100px;
         background: rgba(255, 255, 255, 0.2);
-
         height: 100vh;
         max-width: 300px;
         transform: translate(150%);
@@ -188,4 +182,73 @@ nav li {
     .navbar-container input[type="checkbox"]:checked ~ .name{
         display: none;
     }
+}
+
+/** /Navbar **/
+
+@keyframes ChangeColor {
+    0% {background-position: 0% 0%;}
+    50% {background-position: 50% 50%;}
+    100% {background-position: 100% 100%;}
+}
+
+#home {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(136deg, 
+                rgb(224,18,231),
+                rgb(29, 17, 122),
+                rgb(135,19,178),
+                rgb(30,23,127), 
+                rgb(241,33,245)) 0% 0% / 1000% 1000%;
+    animation: ChangeColor 70s ease infinite;
+}
+
+#home > * {
+    margin: 15px auto;
+}
+
+#home h1 {
+    font-size: 4.5em;
+}
+
+#home p {
+    font-size: 1.3em;
+}
+
+
+.social {
+    display: flex;
+    justify-content: center;
+}
+
+.social img {
+    opacity: 0.5;
+}
+
+#home .about_me_btn {
+    margin-top: 45px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 2em;
+    padding: 10px;
+    border: 3px solid #fff;
+    border-radius: 15px;
+    background-color: transparent;
+}
+
+#home .about_me_btn {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+}
+
+#home .about_me_btn:hover {
+    color: #000;
+    border-color: #000;
+    background-color: rgba(255, 255, 255, 0.4);
 }
