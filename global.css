@@ -4,6 +4,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 .main {
@@ -251,4 +252,42 @@
     color: #000;
     border-color: #000;
     background-color: rgba(255, 255, 255, 0.4);
+}
+
+#about_me {
+    scroll-padding-top: 0;
+    padding: 5em 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #d0dffff1;
+}
+
+#about_me img {
+    width: 25%;
+    object-position: center;
+    object-fit: contain;
+}
+
+#about_me p {
+    width: 40%;
+    font-size: 1.5em;
+}
+
+@media (max-width: 768px){
+    #about_me {
+        flex-direction: column;
+    }
+
+    #about_me img {
+        width: 50vw;
+        height: 50vw;
+
+    }
+    
+    #about_me p {
+        width: 80%;
+        margin: 45px auto;
+        font-size: 1.5em;
+    }
 }
