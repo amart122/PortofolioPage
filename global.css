@@ -202,11 +202,11 @@ body {
     flex-direction: column;
     align-items: center;
     background: linear-gradient(136deg, 
-                rgb(149, 18, 231),
-                rgb(29, 17, 122),
-                rgb(135,19,178),
-                rgb(30,23,127), 
-                rgb(241,33,245)) 0% 0% / 1000% 1000%;
+                #91221E,
+                #030202,
+                #F2A65A,
+                #772F1A, 
+                #FD5430) 0% 0% / 1000% 1000%;
     animation: ChangeColor 70s ease infinite;
 }
 
@@ -295,7 +295,11 @@ body {
     }
 }
 
-#projects {
+h2 {
+    font-size: 32px;
+}
+
+#projects, #contact {
     margin-top: 5em;
     padding: 2em 5%;
 }
@@ -315,7 +319,6 @@ body {
 }
 
 .project-cont > img {
-    /* width: 70%; */
     min-width: 640px;
     min-height: 360px;
     border-radius: 7px;
@@ -323,14 +326,18 @@ body {
 
 .project-cont .description {
     margin-left: 2em;
-    font-size: 1.8em;
+    font-size: 1em;
     margin-bottom: 15px;
 }
 
 .project-cont .description a {
     display: block;
-    font-size: 2em;
+    font-size: 1.8em;
     margin-bottom: 6px;
+}
+
+.project-cont .description p {
+    font-size: 1.5em;
 }
 
 .project-cont .stack {
@@ -351,4 +358,32 @@ body {
 .project-cont .stack img {
     width: 35px;
     height: 35px;
+}
+
+#contact h4 {
+    color: #FD5430;
+    margin-bottom: 10px;
+}
+
+#contact p {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    min-height: 20px;
+}
+
+
+#contact > div {
+    padding: 30px 0px;
+}
+
+#contact img {
+    width: 15px;
+    margin-right: 7px;
+}
+
+#contact a {
+    text-decoration: none;
+    text-align: center;
+    line-height: 1;
 }
