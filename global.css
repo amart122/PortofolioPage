@@ -273,7 +273,8 @@ body {
 
 #about_me p {
     width: 40%;
-    font-size: 1.5em;
+    font-size: 1.4em;
+    line-height: 1.6em;
 }
 
 @media (max-width: 768px){
