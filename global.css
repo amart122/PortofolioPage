@@ -356,11 +356,13 @@ hr {
     align-items: center;
     justify-content: center;
     margin-right: 5px;
+    margin-bottom: 15px;
 }
 
 .project-cont .stack img {
     width: 35px;
     height: 35px;
+    object-fit: contain;
 }
 
 
