@@ -29,7 +29,6 @@ body {
     width: 100%;
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(1em);
-    color: #000;
     opacity: 0.85;
     z-index: 100;
 }
@@ -59,7 +58,6 @@ body {
 }
 
 .navbar a{
-    color: #000;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease-in-out;
@@ -143,7 +141,7 @@ body {
         transform: translate(150%);
         display: flex;
         flex-direction: column;
-        margin-left: -40px;
+        margin-left: -45px;
         padding-left: 40px;
         padding-right: 40px;
         transition: transform 0.5s ease-in-out;
@@ -251,9 +249,9 @@ body {
 }
 
 #home .about_me_btn:hover {
-    color: #000;
-    border-color: #000;
-    background-color: rgba(255, 255, 255, 0.4);
+    color: #FD5430;
+    border-color: #FD5430;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 #about_me {
@@ -299,11 +297,16 @@ h2 {
     font-size: 32px;
 }
 
-#projects, #contact {
+hr {
+    color: #FD5430;
+}
+
+#projects, #contact, #tech-skills {
     margin-top: 5em;
     padding: 2em 5%;
 }
 
+/*** Project Section */
 .project-cont {
     display: flex;
     flex-direction: row;
@@ -360,6 +363,8 @@ h2 {
     height: 35px;
 }
 
+
+/*** Contact Section */
 #contact h4 {
     color: #FD5430;
     margin-bottom: 10px;
@@ -386,4 +391,57 @@ h2 {
     text-decoration: none;
     text-align: center;
     line-height: 1;
+}
+
+#tech-skills .categories-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+#tech-skills .category {
+    margin-top: 35px;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 25%;
+    min-width: 250px;
+}
+
+#tech-skills .category > span {
+    width: 100%;
+    font-size: 1.3em;
+    box-shadow: 0px -3px 10px -4px rgba(255, 109, 109, 0.464) inset;
+    color: #FD5430;
+    padding: 8px 0px 8px 8px;
+    border-radius: 8px;
+}
+
+#tech-skills .language {
+    width: 50%;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+#tech-skills .language img {
+    object-fit: contain;
+    width: 45px;
+    height: 45px;
+}
+
+#tech-skills .language:not(:nth-child(odd)) {
+    padding-left: 8px;
+}
+
+footer {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0px;
 }
