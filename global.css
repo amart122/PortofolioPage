@@ -341,7 +341,8 @@ hr {
 }
 
 .project-cont .description p {
-    font-size: 1.5em;
+    font-size: 1.2em;
+    line-height: 1.4em;
 }
 
 .project-cont .stack {
@@ -364,6 +365,12 @@ hr {
     width: 35px;
     height: 35px;
     object-fit: contain;
+}
+
+.project-cont a.learn-more {
+    margin-top: 15px;
+    font-size: 1em;
+    color: #FD5430;
 }
 
 
