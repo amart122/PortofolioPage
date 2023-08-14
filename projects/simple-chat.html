@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../assets/css/simple-chat.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Questrial">
     <link rel="icon" href="../assets/favicon.ico">
+    <script src="../assets/js/simple-chat.js"></script>
 </head>
 <body>
     <div class="main">
@@ -27,9 +28,11 @@
                 </ul>
                 <h1 class="name">&lt;Aram /&gt;</h1>
             </div>
+
+            <button id="backBtn" data-next-page="overview">&lt;-</button>
         </nav>
 
-        <div class="page overview">
+        <div class="page active overview">
             <img src="../assets/simple-chat-ssthumb.jpg" alt="Simple Chat Dashboard" width="640" height="360">
             <div class="overview-body">
                 <h1>Project Overview</h1>
@@ -48,7 +51,7 @@
                         <li> - User Status</li>
                     </ul>
                     <div class="learn-more">
-                        <button>Learn More</button>
+                        <button data-next-page="features">Learn More</button>
                     </div>
                 </div>
                 <div class="stack">
@@ -66,7 +69,7 @@
                         <span>JavaScript</span>
                     </div>
                     <div class="learn-more">
-                        <button>Learn More</button>
+                        <button data-next-page="frontend">Learn More</button>
                     </div>
                 </div>
                 <div class="stack">
@@ -92,7 +95,7 @@
                         <span>Redis</span>
                     </div>
                     <div class="learn-more">
-                        <button>Learn More</button>
+                        <button data-next-page="backend">Learn More</button>
                     </div>
                 </div>
                 <div class="stack">
@@ -106,10 +109,26 @@
                         <span>Nginx</span>
                     </div>
                     <div class="learn-more">
-                        <button>Learn More</button>
+                        <button data-next-page="cloud">Learn More</button>
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="page features">
+
+        </div>
+
+        <div class="page frontend">
+
+        </div>
+
+        <div class="page backend">
+
+        </div>
+
+        <div class="page cloud">
+
         </div>
     </div>
 </body>
