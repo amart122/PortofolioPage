@@ -158,3 +158,48 @@ main {
     width: 45px;
     height: 45px;
 }
+
+.page:not(.overview) {
+    text-align: center;
+}
+
+.features ul {
+    list-style: none;
+    text-align: start;
+}
+
+.features ul li {
+    margin: 30px auto;
+}
+
+.features ul hr {
+    margin-bottom: 25px;
+}
+
+.features ul img {
+    border-radius: 8px;
+}
+
+.features .figure-container {
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.features .figure-container figure {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.features .figure-container figcaption {
+    padding: 5px;
+}
+
+.features .figure-container img {
+    max-width: 600px;
+    width: 100%;
+    height: 100%;
+    align-self: center;
+}
