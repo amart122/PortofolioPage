@@ -208,6 +208,7 @@ body {
                 #FD5430) 0% 0% / 1000% 1000%;
     animation: ChangeColor 70s ease infinite;
     clip-path: ellipse(100% 90% at 44% 10%);
+    text-align: center;
 }
 
 #home > * {
@@ -312,6 +313,9 @@ hr {
 /*** Project Section */
 .project-cont {
     display: flex;
+    width: 100%;
+    min-height: 360px;
+    height: 100%;
     flex-direction: row;
     margin: 2em 0px;
     padding: 30px;
@@ -329,8 +333,9 @@ hr {
 }
 
 .project-cont > img {
-    min-width: 640px;
-    min-height: 360px;
+    max-width: 50%;
+    max-height: 360px;
+    height: 100%;
     border-radius: 7px;
 }
 
@@ -379,6 +384,28 @@ hr {
     color: #FD5430;
 }
 
+
+@media only screen and (max-width: 992px) {
+    .project-cont {
+        flex-wrap: wrap;
+    }
+
+    .project-cont > img {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        padding: 20px;
+    }
+
+    .project-cont .description {
+        margin-left: 0px;
+        font-size: 1em;
+        margin-bottom: 15px;
+        padding: 20px;
+        width: 100%;
+    }
+}
 
 /*** Contact Section */
 #contact h4 {
@@ -455,6 +482,22 @@ hr {
 
 #tech-skills .language:not(:nth-child(odd)) {
     padding-left: 8px;
+}
+
+@media (max-width: 880px){
+    #tech-skills .categories-container {
+        justify-content: space-around;
+    }
+
+    #tech-skills .category {
+        width: 40%;
+    }
+}
+
+@media (max-width: 580px){
+    #tech-skills .category {
+        width: 100%;
+    }
 }
 
 footer {
