@@ -188,17 +188,65 @@
             </ul>
         </section>
 
-        <div class="page frontend">
+        <section class="page architecture">
+            <h1>Architecture</h1>
+            <p>The system is separated between two different applications. A Single Page Applications (SPA) built using VueJS and a Django application that serves as both a REST API and a Websocket API.</p>
 
-        </div>
+            <div class="category">
+                <h3>Frontend</h3>
+                <hr>
+                <div>
+                    <p>The main reason for using VueJS is its reactivy and how well it complements the use of Websockets for realtime updates.</p>
 
-        <div class="page backend">
+                    <h5>User Management</h5>
+                    <p>Most of the use cases in the system are handled by the Django Backend except for a very crucial case, user management.</p>
+                    <p>Firebase Auth was selected as the intermediary middleware for user management on account of its robust security considerations. This alone completely removed the necessity for the system to directly manage the intricacies associated with the storage and retention of user credentials.</p>
 
-        </div>
-
-        <div class="page cloud">
-
-        </div>
+                    <h5>Dependencies</h5>
+                    <ul class="dependencies">
+                        <li>
+                            Vuex
+                            <p>Chosen for its ability to simplify cross component data modifications and updates. Used mostly for notifications and friend's status. </p>
+                        </li>
+                        <li>
+                            Firebase
+                            <p>Use as user management system. All forms of user authentication and authorization are handled by Firebase.</p>
+                        </li>
+                        <li>
+                            Axios
+                            <p>Used to simply API calls to the backend. Also chosen due to its Promised based design.</p>
+                        </li>
+                        <li>
+                            Vue Router
+                            <p>Chosen only for its ability to simplify page navigation from a developer perspective.</p> 
+                        </li>
+                        <li>
+                            Sass
+                            <p>Neccessary to write SCSS inside Vue files.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="category">
+                <h3>Backend</h3>
+                <hr>
+                <p>Built using Django in conjuction with two major libraries Django Rest Framwork (DRF) to handle REST API and Django Channels for Websockets.</p>
+                <div class="wsgi">
+                    <h5>Django Rest Framework</h5>
+                    <p>DRF was utilized to implement features such as friend addition, user authorization (signup and login), leveraging Django's capabilities while adhering to REST principles.</p>
+                </div>
+                <div class="asgi">
+                    <h5>Django Channels</h5>
+                    <p>Contrary to DRF Django Channels was employed to facilitate real-time message exchange and notifications, enabling seamless, asynchronous communication for timely updates within the application.</p>
+                </div>
+            </div>
+            <div class="category cloud">
+                <h3>Cloud</h3>
+                <hr>
+                <p>The deployment of the application takes place on an AWS Lightsail Virtual Machine (VM), with Nginx serving as the load balancer. The Vue application is presented as a static file, while the Django backend is partitioned across dual processes. The REST API segment utilizes Gunicorn as the web server, while the WebSocket functionality is managed through Daphne layered on Django Channels to efficiently handle WebSocket connections.</p>
+                <p>Each of these three distinct processes is encapsulated within its own dedicated Unix service, thereby establishing a robust fault-tolerant framework to mitigate potential crashes. Moreover, this segregated architecture contributes to a streamlined deployment procedure, facilitating efficiency in the deployment lifecycle.</p>
+            </div>
+        </section>
     </main>
 </body>
 </html>

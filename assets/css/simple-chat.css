@@ -203,3 +203,35 @@ main {
     height: 100%;
     align-self: center;
 }
+
+.architecture hr {
+    margin-bottom: 15px;
+}
+
+.architecture .category {
+    text-align: start;
+    margin: 30px auto;
+}
+
+.architecture .category h5 {
+    margin: 10px 0px;
+    font-size: 1em;
+    color: #FD5430;
+}
+
+.architecture .dependencies {
+    list-style: inside;
+}
+
+.architecture .dependencies li {
+    margin-top: 10px;
+}
+
+.architecture .dependencies li p {
+    padding-left: 18px;
+    padding-top: 5px;
+}
+
+.architecture .cloud p {
+    margin-bottom: 10px;
+}
