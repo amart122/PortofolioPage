@@ -52,30 +52,48 @@ main {
 }
 
 .overview {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    flex-wrap: wrap;
     padding-top: 15dvh;
 }
 
+.description {
+    width: 100%;
+    display: flex;
+    gap: 15px;
+}
+
+.description img {
+    width: 60%;
+}
+
 .overview-body {
-    width: 50%;
-    padding: 0px 4em;
-    font-size: 1.5rem;
+    width: 40%;
+    font-size: 1.2rem;
 }
 
 .overview-body p {
     padding: 12px 0px;
 }
 
+@media only screen and (max-width: 992px) {
+    .description {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .description > img, .overview-body{
+        width: 100%;
+        height: auto;
+    }
+}
+
 #tech-stack {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: flex-start;
     width: 100%;
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 #tech-stack .stack {
@@ -127,7 +145,8 @@ main {
     display: none;
 }
 
-#tech-stack .stack:hover .learn-more {
+#tech-stack .stack:hover .learn-more,
+#tech-stack .stack:active .learn-more {
     display: flex;
 }
 
@@ -184,6 +203,7 @@ main {
     margin: 30px auto;
     display: flex;
     justify-content: center;
+    gap: 15px;
 }
 
 .features .figure-container figure {
