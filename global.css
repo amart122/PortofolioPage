@@ -229,6 +229,10 @@ body {
     justify-content: center;
 }
 
+.social a {
+    margin: auto 5px;
+}
+
 .social img {
     opacity: 0.5;
 }
