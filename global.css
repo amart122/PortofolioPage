@@ -283,6 +283,46 @@ body {
     line-height: 1.6em;
 }
 
+#about_me a {
+    text-align: center;
+    text-decoration: none;
+    margin-top: 16px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid #fff;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+#about_me a,
+#about_me svg,
+#about_me path {
+    transition: all 0.3s ease-in-out;
+}
+
+#about_me a:hover {
+    color: #FD5430;
+    border-color: #FD5430;
+    background-color: #c7c7c7;
+}
+
+#about_me a:hover svg {
+    fill: #FD5430;
+}
+
+#about_me a:hover path:first-child {
+    stroke: #FD5430;
+}
+
+#about_me a svg,
+#about_me a span {
+    display: block;
+    color: inherit;
+}
+
 @media (max-width: 768px){
     #about_me {
         flex-direction: column;
